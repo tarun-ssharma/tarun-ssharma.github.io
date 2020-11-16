@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>How to create a Github Pages Site Using Jekyll</title>
+    <meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+
+<link rel="stylesheet" href="/css/bootstrap.min.css"/>
+<link rel="stylesheet" href="/assets/css/layouts/main.css"/>
+<link rel="stylesheet" href="/assets/css/style.css"/>
+<link rel="stylesheet" href="/assets/css/navigators/navbar.css"/>
+
+
+<link href="https://fonts.googleapis.com/css2?family=Muli:wght@300;400;500;600" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" />
+
+
+<link rel="icon" type="image/png" href="/assets/images/favicon.png" />
+
+
+<link rel="stylesheet" href="/assets/css/style.css"/>
+
+    
+<meta name="description" content="How to create a Github Pages Site Using Jekyll" />
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/atom-one-dark.min.css"
+/>
+<link rel="stylesheet" href="/assets/css/layouts/single.css"/>
+<link rel="stylesheet" href="/assets/css/navigators/sidebar.css">
+
+
+    
+    
+      
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-XXXXXXXXX-X', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+    
+  </head>
+
+  <body data-spy="scroll" data-target="#TableOfContents" data-offset="80">
+    <div class="container-fluid bg-dimmed wrapper">
+      
+      
+    
+
+
+  
+
+
+  
+
+
+<nav class="navbar navbar-expand-xl top-navbar final-navbar shadow">
+  <div class="container">
+      <button class="navbar-toggler navbar-light" id="sidebar-toggler" type="button" onclick="toggleSidebar()">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <a class="navbar-brand" href="/">
+      <img src="/images/main-logo.png">Tarun&#39;s portfolio</a>
+    <button class="navbar-toggler navbar-light" id="toc-toggler" type="button" onclick="toggleTOC()">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse lang-selector" id="top-nav-items">
+      <ul class="navbar-nav ml-auto">
+      
+      </ul>
+    </div>
+  </div>
+  
+  <img src="/images/main-logo.png" class="d-none" id="main-logo">
+  <img src="/images/inv-logo.png" class="d-none" id="inverted-logo">
+</nav>
+
+
+
+      
+      
+  <section class="sidebar-section" id="sidebar-section">
+    <div class="sidebar-holder">
+      <div class="sidebar" id="sidebar">
+        <input type="text" value="" placeholder="Search" data-search="" id="search-box" />
+        <div class="sidebar-tree">
+          <ul class="tree" id="tree">
+            <li id="list-heading"><a href="posts" data-filter="all">Posts</a></li>
+            <div class="subtree">
+                
+
+            </div>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+      
+      
+<section class="content-section" id="content-section">
+  <div class="content">
+    <div class="container p-0 read-area">
+      
+      <div class="hero-area col-sm-12" id="hero-area" style='background-image: url(/images/posts/jekyll.png);'>
+      </div>
+
+      
+      <div class="page-content">
+        <div class="author-profile ml-auto align-self-lg-center">
+          <img class="rounded-circle" src='/images/avatar.png'/>
+          <h5 class="author-name">Tarun Sharma</h5>
+          <p>September 18, 2020</p>
+        </div>
+
+        <div class="title">
+          <h1>How to create a Github Pages Site Using Jekyll</h1>
+        </div>
+
+        <div class="post-content" id="post-content">
+          <p><strong>TL;DR</strong> Recently I learned how to build my own free personal website with the help of Github. This requires no web hosting or CMS of any kind. Just follow the 7 steps that I’ll cover below.</p>
+<meta name="description" content="{{ post.excerpt }}">
+Recently, I developed an interest in building my own personal website where I could blog about things that I’m learning or creating.
+<p>Some of the obvious options available online are building a website through an open-sourced <a href="https://en.wikipedia.org/wiki/Content_management_system">content management system</a>, such as <a href="https://wordpress.org/">Wordpress</a> which also requires a web hosting service such as <a href="https://www.bluehost.com/web-hosting/signup">Bluehost</a>. Buying a domain and getting a hosting service for it requires money. And while it isn’t much and I could have invested, I decided to check if there was an option to build a free website.</p>
+<p>Turns out, there definitely is a way to build your very own free github website. Follow these 7 quick and easy steps to get your github personal website up and running:</p>
+<p><strong>Pre-requisite</strong>: There are a few git and github steps involved. So familiarity with git and github is beneficial. However, if you are curious enough and can google your queries, I don&rsquo;t think why that should stop you.</p>
+<p><strong>Disclaimer</strong>: This will only work if you’re looking for a minimalistic option like me. If your requirements dictate usage of dynamic pages, usage of databases and such, then a github personal website might not be the best bet.</p>
+<ol>
+<li>
+<p>(<strong>Optional</strong>) Getting a domain name:</p>
+<ul>
+<li>You can purchase a domain online from sites like Bluehost, Namecheap etc.</li>
+</ul>
+<ul>
+<li>Useful if you want your own custom site url and don&rsquo;t want the <em>github.io</em> part which is attached inadvertently to every github pages site url.</li>
+<li>Of course, this step will cost you, but you can skip it if you want.</li>
+</ul>
+</li>
+<li>
+<p>Setting up a github repository to serve as the base for your github personal website:</p>
+<ul>
+<li>Create a new repository with your github account, say <em>new_repo</em></li>
+</ul>
+<ul>
+<li>(<strong>Optional but recommended</strong>) <a href="https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-and-deleting-branches-within-your-repository">Create a new branch</a> from the <em>master</em> branch for <em>new_repo</em>, named <em>gh-pages</em>. Make <em>gh-pages</em> <a href="https://help.github.com/en/github/administering-a-repository/setting-the-default-branch">the default branch</a> for this repo.</li>
+<li>(<strong>Optional</strong>) Go to <em>Settings&gt;Options&gt;GitHub Pages</em> section on the repo page. There you&rsquo;ll see the <em>Source</em> branch (<em>gh-pages</em>) which will be used to built the github website associated with this repo. Also, you&rsquo;ll see the <em>Custom Domain</em> which you can set to your own custom subdomain, using <a href="https://help.github.com/en/github/working-with-github-pages/managing-a-custom-domain-for-your-github-pages-site">this guide</a>. If you don&rsquo;t set any custom domain, your github pages website will be hosted at <strong>https://<em>username</em>.github.io/<em>new_repo</em>/</strong>. Don&rsquo;t forget to enable the <em>Enforce HTTPS</em> checkbox, since <a href="https://web.dev/why-https-matters/">having https matters</a>.</li>
+</ul>
+</li>
+<li>
+<p>Clone <em>new_repo</em> to your local machine to include site related files.</p>
+<pre><code>git clone &lt;new-repo-url&gt;
+#=&gt; new-repo-url is the path to your github repository, and 
+git needs this path to clone it to your local machine.
+</code></pre><p>``</p>
+<p>You can clone the repository into any folder. Let&rsquo;s assume you cloned it into a folder named <em>new_repo</em>.</p>
+</li>
+<li>
+<p>Setup jekyll and its requirements:</p>
+<ul>
+<li>Download <a href="https://git-scm.com/download/win">git bash</a></li>
+<li><a href="https://jekyllrb.com/docs/installation/windows/#installation-via-rubyinstaller">Install jekyll using rubyinstaller</a>
+<ul>
+<li>
+<p><strong>Note:</strong> While performing <em>ridk install</em> step, it asks for components which should be installed:</p>
+<p><img src="/static/images/ruby-installer-message.PNG" alt="ruby installer message">
+Make sure to select all three, one by one. If not, you might encounter the following error in later stages of installation: <a href="https://github.com/jekyll/jekyll/issues/7000">Failed to build gem native extension</a></p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Use jekyll to create site related files:</p>
+<ul>
+<li>
+<p>Using git bash,navigate to your <em>new_repo</em> folder, and run the following command:</p>
+<pre><code>jekyll new . --force
+#=&gt; This command adds new jekyll related files and 
+folders within the current folder.
+#=&gt; --force is used because there are existing 
+files like .git in current directory, which we want 
+jekyll to ignore.
+</code></pre><pre><code></code></pre></li>
+<li>
+<p>Use <em>git status</em> command to see all the files added to the <em>new_repo</em> folder. This folder now has enough information for jekyll to build a website. Read <a href="https://jekyllrb.com/docs/structure/">this doc</a> to know more about the contents of this directory.</p>
+</li>
+<li>
+<p>In the configuration file <em>_config.yml</em>, change the title and description of your site to something of your liking.</p>
+<pre><code>title: Adventures of Tin Tin
+description: I want to educate people about Tin Tin.
+</code></pre><pre><code></code></pre></li>
+</ul>
+<p>Intimidated by this file&rsquo;s YAML syntax? Take a look at this quick <a href="https://rollout.io/blog/yaml-tutorial-everything-you-need-get-started/">walkthrough of YAML</a>.</p>
+<ul>
+<li>
+<p>Now, let&rsquo;s add a new post to our website. In your <em>_posts</em> directory, remove the existing file, and create a new one named <em>2020-05-18-my-very-first-post.markdown</em> with the following content and save it:</p>
+<pre><code>---
+title:  &quot;My very first post&quot;
+date:   2020-05-12
+---
+Hello World!
+</code></pre><pre><code> This weird-looking format is a specific markdown flavour understood by Jekyll, called [Kramdown][kram-docs].
+</code></pre></li>
+<li>
+<p>Now that you have created a post, you need to start a server locally to see how your github website will look like. Go ahead and build the jekyll site using:</p>
+<pre><code>bundle exec jekyll serve --watch
+</code></pre><pre><code> * **Note:** Make sure you are within the root directory, and not within any of its subfolders, while executing this command.
+</code></pre></li>
+<li>
+<p>Navigate to <strong>localhost:4000</strong> in a browser. This is where the jekyll site will be hosted locally. Check out the post you just created. Spend some time navigating through the links and pages.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Making the site public:</p>
+<ul>
+<li>
+<p>Once you are happy with the changes, commit and push the local code to remote repo <em>new_repo</em>. Make sure you are pushing to the <em>gh-pages</em> and not the <em>master</em> branch. Follow these 3 commands on git bash in <em>new_repo</em> folder:</p>
+<pre><code>git add . #Adds all files to be staged to commit
+git commit -m 'My first commit' #Creates a commit
+git push -u origin gh-pages  #Pushes the local changes 
+to remote branch
+</code></pre><pre><code></code></pre></li>
+<li>
+<p>Navigate to <strong>https://<em>username</em>.github.io/<em>new_repo</em>/</strong> or whatever custom domain you&rsquo;ve set to check out your published github personal website.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>[<strong>Next Steps</strong>] So now, we have a site, but its useless since we haven&rsquo;t added anything interesting. Jekyll gives you quite a lot of flexibility in that you can:</p>
+<ul>
+<li>Add/modify/remove <a href="https://jekyllrb.com/docs/posts/">posts</a></li>
+<li>Add/modify/remove <a href="https://jekyllrb.com/docs/pages/">pages</a> in a similar way to posts</li>
+<li>Use <a href="https://jekyllrb.com/docs/plugins/">plugins</a> for additional features like <a href="https://github.com/yihangho/emoji-for-jekyll">enabling emojis</a></li>
+<li>Using pre-designed <a href="https://jekyllrb.com/docs/themes/">themes</a> to add visual flair like <a href="https://github.com/mmistakes/minimal-mistakes">this</a> one.</li>
+</ul>
+</li>
+</ol>
+<p><strong>Voila! We are done with setting up your github personal website. Now you only have to find some interesting topic to write about to get started!</strong></p>
+<p><strong>To know more about github pages, check out:</strong></p>
+<ul>
+<li><a href="https://pages.github.com/">Official page by github pages</a></li>
+</ul>
+<p><strong>To read in more detail about Jekyll, visit:</strong></p>
+<ul>
+<li><a href="https://jekyllrb.com/docs/">Jekyll official documentation</a></li>
+<li><a href="https://programminghistorian.org/en/lessons/building-static-sites-with-jekyll-github-pages">programminghistorian.org page on this topic</a></li>
+</ul>
+<p><strong>To enhance your knowledge on Ruby Gems, Gemfile and Blunder, to be able to do much more with your site, go through:</strong></p>
+<ul>
+<li><a href="https://guides.rubygems.org/">Ruby guides</a></li>
+<li><a href="https://bundler.io/docs.html">Blunder official docs</a></li>
+</ul>
+        </div>
+
+        
+        
+          <div class="btn-improve-page">
+              <a href="https://github.com/hossainemruz/toha-example-site/edit/master/content/posts/2020-05-12-github-pages-site-using-jekyll.md">
+                <i class="fas fa-code-branch"></i>
+                Improve This Page
+              </a>
+          </div>
+        
+
+        
+      <hr />
+        <div class="row next-prev-navigator">
+
+
+  
+
+  
+    
+      
+      <div class="col-md-6 previous-article">
+        <a href="/posts/kettle/" class="btn btn-outline-info">
+          <span><i class="fas fa-chevron-circle-left"></i> Prev</span>
+          <br />
+          <span>Kettle</span>
+        </a>
+      </div>
+      
+    
+    
+      
+        
+        
+          
+              
+          
+        
+        <div class="col-md-6 next-article">
+          <a href="/posts/2020-05-16-game-to-relax-during-covid/" class="btn btn-outline-info">
+            <span>Next <i class="fas fa-chevron-circle-right"></i></span>
+            <br />
+            <span>Game to relax during the corona virus pandemic</span>
+          </a>
+        </div>
+      
+    
+  
+
+  
+
+</div>
+
+      <hr />
+      
+      
+          <div id="disqus_thread"></div>
+<script type="text/javascript">
+  (function () {
+    
+    
+    if (window.location.hostname == "localhost") return;
+
+    var dsq = document.createElement("script");
+    dsq.type = "text/javascript";
+    dsq.async = true;
+    var disqus_shortname = "does-not-exist";
+    dsq.src = "//" + disqus_shortname + ".disqus.com/embed.js";
+    (
+      document.getElementsByTagName("head")[0] ||
+      document.getElementsByTagName("body")[0]
+    ).appendChild(dsq);
+  })();
+</script>
+<noscript
+  >Please enable JavaScript to view the
+  <a href="https://disqus.com/?ref_noscript"
+    >comments powered by Disqus.</a
+  ></noscript
+>
+<a href="https://disqus.com/" class="dsq-brlink"
+  >comments powered by <span class="logo-disqus">Disqus</span></a
+>
+
+      
+      </div>
+    </div>
+  </div>
+  
+</section>
+
+
+      
+      
+  <section class="toc-section" id="toc-section">
+    
+    <div class="toc-holder">
+      <h5 class="text-center pl-3">Table of Contents</h5>
+      <hr>
+      <div class="toc">
+        <nav id="TableOfContents"></nav>
+      </div>
+    </div>
+    
+  </section>
+
+    </div>
+
+    
+
+
+
+
+
+
+
+
+<footer class="container-fluid text-center align-content-center footer pb-2">
+  <div class="container pt-5">
+    <div class="row text-left">
+      <div class="col-md-4 col-sm-12">
+        <h5>Navigation</h5>
+        
+        <ul>
+            
+              
+              
+                
+              
+              <li class="nav-item">
+                <a class="smooth-scroll" href="#about">About</a>
+              </li>
+            
+            
+              
+              
+                
+              
+              <li class="nav-item">
+                <a class="smooth-scroll" href="#skills">Courses</a>
+              </li>
+            
+            
+              
+              
+                
+              
+              <li class="nav-item">
+                <a class="smooth-scroll" href="#experiences">Experiences</a>
+              </li>
+            
+            
+              
+              
+                
+              
+              <li class="nav-item">
+                <a class="smooth-scroll" href="#projects">Projects</a>
+              </li>
+            
+            
+              
+              
+                
+              
+              <li class="nav-item">
+                <a class="smooth-scroll" href="#recent-posts">Recent Posts</a>
+              </li>
+            
+            
+              
+              
+                
+              
+              <li class="nav-item">
+                <a class="smooth-scroll" href="#achievements">Achievements</a>
+              </li>
+            
+        </ul>
+        
+
+      </div>
+      
+      <div class="col-md-4 col-sm-12">
+        <h5>Contact me:</h5>
+        <ul>
+          
+          <li><span>Email: </span> <span>1starun8@example.com</span></li>
+          
+          <li><span>Phone: </span> <span>&#43;91 7993267390</span></li>
+          
+        </ul>
+      </div>
+      
+      
+    </div>
+  </div>
+  <hr />
+  <div class="container">
+    <div class="row text-left">
+      <div class="col-md-4">
+        <a id="theme" href="https://github.com/hossainemruz/toha" target="#">
+          <img src="/assets/images/inverted-logo.png">
+          Toha
+        </a>
+      </div>
+      <div class="col-md-4 text-center">© 2020 Copyright.</div>
+      <div class="col-md-4 text-right">
+        <a id="hugo" href="https://gohugo.io/">Powered by
+        <img
+          src="/assets/images/hugo-logo-wide.svg"
+          alt="Hugo Logo"
+          height="18"
+        />
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+    <script
+  src="https://code.jquery.com/jquery-3.5.1.min.js"
+  integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+  crossorigin="anonymous"></script>
+<script src="/assets/js/bootstrap.min.js"></script>
+
+<script src="/assets/js/navbar.js"></script>
+<script src="/assets/js/main.js"></script>
+<script src="/js/github-button.js" type="text/javascript"></script>
+<link href="/css/about_extra.css" rel="stylesheet"/>
+<link href="/css/skills_extra.css" rel="stylesheet"/>
+<link href="/css/projects_extra.css" rel="stylesheet"/>
+<link href="/css/sections/achievements.css" rel="stylesheet"/>
+
+<link href="/css/sections/home.css" rel="stylesheet"/>
+<link href="/css/layouts/main.css" rel="stylesheet"/>
+<link href="/css/navigators/navbar.css" rel="stylesheet"/>
+<link href="/css/sections/projects.css" rel="stylesheet"/>
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+
+<link href="/css/pre-loader.css" rel="stylesheet" type="text/css"/>
+
+    
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js"></script>
+<script src="/assets/js/single.js"></script>
+<script>
+  hljs.initHighlightingOnLoad();
+</script>
+
+
+  </body>
+</html>
