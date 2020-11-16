@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>game p5js on Tarun&#39;s portfolio</title>
-    <link>tarun-ssharma/tarun-ssharma.github.io/categories/game-p5js/</link>
+    <link>tarun-ssharma.github.io/categories/game-p5js/</link>
     <description>Recent content in game p5js on Tarun&#39;s portfolio</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 16 May 2020 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="tarun-ssharma/tarun-ssharma.github.io/categories/game-p5js/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="tarun-ssharma.github.io/categories/game-p5js/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Game to relax during the corona virus pandemic</title>
-      <link>tarun-ssharma/tarun-ssharma.github.io/posts/2020-05-16-game-to-relax-during-covid/</link>
+      <link>tarun-ssharma.github.io/posts/2020-05-16-game-to-relax-during-covid/</link>
       <pubDate>Sat, 16 May 2020 00:00:00 +0000</pubDate>
       
-      <guid>tarun-ssharma/tarun-ssharma.github.io/posts/2020-05-16-game-to-relax-during-covid/</guid>
+      <guid>tarun-ssharma.github.io/posts/2020-05-16-game-to-relax-during-covid/</guid>
       <description>&lt;p&gt;Does the thought of going out scare you with all the pandemic news? What if you could have fun in some of the time that you are worried about COVID-19? Play this simple game I made using &lt;a href=&#34;https://p5js.org/&#34;&gt;p5js&lt;/a&gt;. Your goal is to go out and collect virtual groceries whilst avoiding infected people!&lt;/p&gt;</description>
     </item>
     
