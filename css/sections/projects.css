@@ -21,8 +21,8 @@
 }
 
 .projects-section .card .card-header .sub-title {
-  color: #8392a5;
-  margin-top: 0.4rem;
+  color: black !important;
+  margin-top: 0rem !important;
 }
 
 .filtr-projects {

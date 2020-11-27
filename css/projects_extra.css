@@ -11,7 +11,7 @@
 
 .projects-section .card .card-img-xs{
     width: 100% !important;
-    height: 250px !important;
+    height: 100% !important;
 }
 
 .projects-section .card .d-flex{
