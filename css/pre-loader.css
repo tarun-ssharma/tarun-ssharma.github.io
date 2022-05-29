@@ -1,0 +1,7 @@
+#preloader {
+  display: block;
+  left: 50%;
+  margin: -125px 0 0 -125px;
+  position: fixed;
+  top: 50%;
+}

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>jekyll github-pages github-personal-website on Tarun&#39;s portfolio</title>
+    <link>/categories/jekyll-github-pages-github-personal-website/</link>
+    <description>Recent content in jekyll github-pages github-personal-website on Tarun&#39;s portfolio</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 18 Sep 2020 15:31:31 +0530</lastBuildDate><atom:link href="/categories/jekyll-github-pages-github-personal-website/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How to create a Github Pages Site Using Jekyll</title>
+      <link>/posts/2020-05-12-github-pages-site-using-jekyll/</link>
+      <pubDate>Fri, 18 Sep 2020 15:31:31 +0530</pubDate>
+      
+      <guid>/posts/2020-05-12-github-pages-site-using-jekyll/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;TL;DR&lt;/strong&gt; Recently I learned how to build my own free personal website with the help of Github. This requires no web hosting or CMS of any kind. Just follow the 7 steps that I’ll cover below.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

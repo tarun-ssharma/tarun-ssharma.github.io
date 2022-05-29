@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Categories on Tarun&#39;s portfolio</title>
+    <link>/categories/</link>
+    <description>Recent content in Categories on Tarun&#39;s portfolio</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 18 Sep 2020 15:31:31 +0530</lastBuildDate><atom:link href="/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>jekyll github-pages github-personal-website</title>
+      <link>/categories/jekyll-github-pages-github-personal-website/</link>
+      <pubDate>Fri, 18 Sep 2020 15:31:31 +0530</pubDate>
+      
+      <guid>/categories/jekyll-github-pages-github-personal-website/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>game p5js</title>
+      <link>/categories/game-p5js/</link>
+      <pubDate>Sat, 16 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/categories/game-p5js/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

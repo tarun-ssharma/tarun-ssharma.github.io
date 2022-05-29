@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tarun&#39;s portfolio</title>
+    <link>/</link>
+    <description>Recent content on Tarun&#39;s portfolio</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 19 Sep 2020 12:40:04 +0530</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Kettle</title>
+      <link>/posts/kettle/</link>
+      <pubDate>Sat, 19 Sep 2020 12:40:04 +0530</pubDate>
+      
+      <guid>/posts/kettle/</guid>
+      <description>Quick history of design of kettles: In the early 1800s, fire was used to heat up liquids. First electric kettle is said to be discovered in 1891. In that design the heating element was in a different compartment than the liquid itself, and hence it took longer to heat the liquid. This issue was solved around the 1920s, when the heating element was placed inside a metallic cylinder, which was placed directly within the liquid.</description>
+    </item>
+    
+    <item>
+      <title>How to create a Github Pages Site Using Jekyll</title>
+      <link>/posts/2020-05-12-github-pages-site-using-jekyll/</link>
+      <pubDate>Fri, 18 Sep 2020 15:31:31 +0530</pubDate>
+      
+      <guid>/posts/2020-05-12-github-pages-site-using-jekyll/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;TL;DR&lt;/strong&gt; Recently I learned how to build my own free personal website with the help of Github. This requires no web hosting or CMS of any kind. Just follow the 7 steps that I’ll cover below.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Game to relax during the corona virus pandemic</title>
+      <link>/posts/2020-05-16-game-to-relax-during-covid/</link>
+      <pubDate>Sat, 16 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/2020-05-16-game-to-relax-during-covid/</guid>
+      <description>&lt;p&gt;Does the thought of going out scare you with all the pandemic news? What if you could have fun in some of the time that you are worried about COVID-19? Play this simple game I made using &lt;a href=&#34;https://p5js.org/&#34;&gt;p5js&lt;/a&gt;. Your goal is to go out and collect virtual groceries whilst avoiding infected people!&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Game to relax during the corona virus pandemic</title>
+      <link>/recent-posts/2020-05-16-game-to-relax-during-covid/</link>
+      <pubDate>Sat, 16 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/recent-posts/2020-05-16-game-to-relax-during-covid/</guid>
+      <description>&lt;p&gt;Does the thought of going out scare you with all the pandemic news? What if you could have fun in some of the time that you are worried about COVID-19? Play this simple game I made using &lt;a href=&#34;https://p5js.org/&#34;&gt;p5js&lt;/a&gt;. Your goal is to go out and collect virtual groceries whilst avoiding infected people!&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
